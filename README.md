@@ -5,6 +5,32 @@ Boas práticas para migrações WordPress
 
 Migrar um site WordPress de um servidor para outro pode parecer um desafio, mas com as ferramentas e práticas corretas, o processo pode ser simplificado. Abaixo está um guia passo a passo, incluindo boas práticas para garantir uma migração suave.
 
+### Guia para Migrações de Sites WordPress.org de um Servidor para Outro
+
+#### Secção Preliminar: Elementos a Migrar
+
+Existem três componentes principais que precisa copiar ao migrar um site WordPress:
+
+1. **Ficheiros do Sistema (excluindo wp-content/uploads):**
+   - Estes incluem os ficheiros do core do WordPress, temas e plugins.
+   - A pasta `wp-content/uploads` é frequentemente de grande porte e pode demorar mais tempo a copiar. Por isso, muitas vezes é copiada separadamente no final.
+
+2. **Base de Dados:**
+   - Contém todo o conteúdo dinâmico do site, como posts, páginas, configurações e dados de plugins.
+
+3. **Uploads:**
+   - Esta pasta inclui todas as imagens, vídeos e outros ficheiros que foram carregados para o site. A transferência destes ficheiros pode ser demorada, por isso, normalmente, é deixada para o fim e pode ser feita em paralelo após a migração principal.
+
+#### Como Criar um Arquivo do Filesystem Excluindo a Pasta dos Uploads
+
+Para criar um arquivo dos ficheiros do sistema excluindo a pasta `wp-content/uploads`, podes usar o comando `tar` no terminal. Aqui está um exemplo de como o fazer:
+
+```sh
+tar --exclude='wp-content/uploads' -czvf site-files.tar.gz /caminho/para/site
+```
+
+Este comando cria um arquivo comprimido (`site-files.tar.gz`) de todos os ficheiros do seu site WordPress, excluindo a pasta `wp-content/uploads`.
+
 #### 1. Utilizar o Plugin "All-in-One WP Migration"
 
 **Procedimento Básico:**
