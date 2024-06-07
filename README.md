@@ -31,7 +31,10 @@ tar --exclude='wp-content/uploads' -czvf site-files.tar.gz /caminho/para/site
 
 Este comando cria um arquivo comprimido (`site-files.tar.gz`) de todos os ficheiros do seu site WordPress, excluindo a pasta `wp-content/uploads`.
 
-#### 1. Utilizar o Plugin "All-in-One WP Migration"
+###$ 1.1 Utilizar o Plugin "WP Migrate Prod"
+** Ver o Readme do plugin [aqui](https://github.com/WidgiLabs/wp-migrate-pro) e seguir as instruções do documento **
+
+#### 1.2 Utilizar o Plugin "All-in-One WP Migration"
 
 **Procedimento Básico:**
 1. **No servidor de origem:**
