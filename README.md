@@ -41,7 +41,7 @@ Este comando cria um arquivo comprimido (`site-files.tar.gz`) de todos os fichei
 
 2. **No servidor de destino:**
    - Instale o plugin [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/).
-   - Importe o backup previamente exportado.
+   - Importe o backup (extensão .wpress) previamente exportado.
 
 **Nota:** Este método pode não ser viável para sites grandes devido a limitações de tamanho de ficheiros e restrições de memória nos servidores. 
 
